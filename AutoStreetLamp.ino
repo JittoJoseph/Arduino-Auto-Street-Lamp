@@ -22,7 +22,7 @@ sensorValue = analogRead(sensorPin);
 
 Serial.println(sensorValue);
 
-if (sensorValue < 100)
+if (sensorValue < 140)
 
 {
 
@@ -33,9 +33,10 @@ digitalWrite(led,HIGH);
 delay(1000);
 
 }
-
-digitalWrite(led,LOW);
-
+else
+{
+  digitalWrite(led,LOW);
+}
 //delay(sensorValue);
 
 }
